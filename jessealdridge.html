@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<style>
+  body {
+    /*background:linear-gradient(to bottom, #4488dd 0%, #44dddd 100%);*/
+    background: #dddddd;
+    margin: 0; height:100%
+  }
+
+  .main_div {
+    width:750px;
+    margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:10px;
+    background:#fff;
+    padding-left:30px; padding-right:30px; padding-top:15px;
+    padding-bottom:15px; border-radius:10px;
+    font-size:90%; font-family:Verdana;
+  }
+  .years_col {
+    float:left; border-right:solid 1px; width:20%; text-align:right;
+    padding-right:10px; border-color:#ccc
+  }
+  .main_text { float:left; width:70%; margin-left:20px }
+
+  @media screen and (max-device-width: 480px){
+    .years_col {display:none}
+    .main_text {margin-left:auto; margin-right:auto; width:100%}
+  }
+
+  .info_box {
+    float:left; font-size:100%; font-family:Tahoma;
+    margin:20px 20px 20px 10px; padding:0px 15px 5px 10px;
+    border:solid 1px; border-radius:10px; display-style:none;
+    box-shadow:-1px 1px 2px #aaa;
+  }
+  .info_box h1 {
+    font-size:120%;color:#000;
+  }
+  .info_box ul, .info_box p {
+    list-style:none; font-size:100%; padding-left:10px;
+  }
+  .info_box li, .info_box p{ margin-bottom:3px }
+
+
+  .social_links > a > img {
+    width:16px; height:16px
+  }
+
+  img.gmail {
+    margin-bottom: -10px; margin-right: 9px;
+  }
+
+  .gradient-box {
+    border-radius: 50px;
+    left: 85%; top: 20px;
+    width:100px; height:100px; position: absolute;
+  }
+
+</style>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'>
+</script>
+<script>
+
+function rgb_to_hex_str(rgb_list) {
+
+  // Scale from (0.0 - 1.0) to (0 - 255), and build a hex string (eg #ffffff).
+
+  var rgb_str = '#'
+  for(var i_piece = 0; i_piece < rgb_list.length; i_piece++) {
+    var piece = Math.round(rgb_list[i_piece] * 255).toString(16);
+    if(piece.length == 1)
+      piece = '0' + piece;
+    rgb_str += piece;
+  }
+  return rgb_str
+}
+
+var color_list1 = [.3,.5,.6], color_list2 = [.3,.8,.8];
+var adjust_dirs1 = [1,1,1];
+var adjust_dirs2 = [1,-1,1];
+var frames = 0;
+function animate_background() {
+  frames += 1;
+  var color_str1 = rgb_to_hex_str(color_list1);
+  var color_str2 = rgb_to_hex_str(color_list2);
+
+  random_adjust(color_list1, adjust_dirs1);
+  random_adjust(color_list2, adjust_dirs2);
+
+  $('.gradient-box').css(
+    {'background':
+     'linear-gradient(160deg, {color1} 0%, {color2} 100%)'.replace(
+     '{color1}', color_str1).replace('{color2}', color_str2)});
+  setTimeout(animate_background, 1000 / 20.);
+}
+
+
+function random_adjust(list, adjust_dirs) {
+  var adjust_amount = .01;
+  for(var i = 0; i < 3; i++) {
+    if(Math.random() < .02)
+      adjust_dirs[i] *= -1;
+    list[i] += Math.random() * adjust_amount * adjust_dirs[i];
+    if(list[i] < .1)
+      list[i] = .1;
+    if(list[i] > .9)
+      list[i] = .9;
+  }
+}
+animate_background();
+</script>
+
+<body>
+
+<div class='gradient-box' title="no, it doesn't do anything (besides look pretty)"></div>
+
+<div class='main_div'>
+
+  <div class='top'>
+
+    <div class='pics' style="float:left; margin-top:20px">
+
+      <div class="social_links" style="width:80px; margin-left:auto; margin-right:auto">
+        <a href='https://stackoverflow.com/users/88696/jesse-aldridge'><img src="https://stackoverflow.com/favicon.ico"></a>
+        <a href='https://github.com/JesseAldridge'><img src="https://github.com/favicon.ico"></a>
+        <a href='http://news.ycombinator.com/threads?id=JesseAldridge'><img src="https://news.ycombinator.com/favicon.ico"></a>
+        <a href='https://twitter.com/jessald'><img src="https://twitter.com/favicon.ico"></a>
+        <a href='https://www.facebook.com/jesse.aldridge.501'><img src='https://facebook.com/favicon.ico'></a>
+        <a href='http://www.last.fm/user/JesseAldridge'><img src='http://cdn.last.fm/flatness/favicon.2.ico'></a>
+        <a href='https://www.linkedin.com/in/jessald'><img src='http://s.c.lnkd.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico'></a>
+        <a href='https://jessealdridge.blog'><img src='https://s2.wp.com/i/favicon.ico'></a>
+      </div>
+    </div>
+
+    <div style="display:inline-block; margin-left:50px">
+      <p>Jesse Aldridge;  Programmer;  San Francisco</p>
+      <p><a href='mailto:JesseAldridge@gmail.com'><img class="gmail" src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon2.ico">JesseAldridge@gmail.com</a>
+      <p><a href='http://dl.dropbox.com/u/135901/job/resume.txt'>Formal Resume</a></p>
+    </div>
+
+  </div>
+
+  <div style='margin-top:20px; clear:both'>
+    <div class='years_col'>
+      <p style="margin-top:13%">2017</p>
+      <p style="margin-top:13%">2016</p>
+      <p style="margin-top:20%">2015</p>
+      <p style="margin-top:24%">2014</p>
+      <p style="margin-top:30%">2013</p>
+      <p style="margin-top:22%">2010</p>
+      <p style="margin-top:42%">2007</p>
+      <p style="margin-top:60%; margin-bottom:50px">2004</p>
+    </div>
+
+    <div class='main_text'>
+    <p>I'm currently working at <a href='http://www.airbnb.com'>AirBnb 🏠</a>.</p>
+    <p>Before that I was a backend engineer at <a href='https://www.gigwalk.com'>GigWalk 🚶</a>.</p>
+    <p>Before that I was at <a href='https://www.instacart.com'>Instacart 🍌</a>.</p>
+    <p>Before that I built <a href='http://taskranger.com'>Task Ranger 📈</a>, a productivity tool for knowledge workers.</p>
+    <p>A few years ago I worked as a software developer at <a href='http://zenoss.com'>Zenoss 📡</a>, a cloud monitoring company.
+    <p>Before that I was at <a href='http://mutualmobile.com'>Mutual Mobile 📱</a>, building server backends for mobile applications.</p>
+    <p>Here are a few neat little things I made on various weekends: <a href="http://www.startupsims.com/">StartupSims.com 👓</a>, <a href='http://dl.dropbox.com/u/135901/Ray-Bounce/ray-bounce.html'>Ray Bounce ⚡️</a>,  <a href='http://dl.dropbox.com/u/135901/life/life_gradient.html'>Game of Life 💦</a></p>
+    <p>I worked for a while as a one-man web development team for the <a href="http://www.tfaonline.net/">Texas Faculty Association 🎓</a>.</p>
+    <p>I also worked on <a href='http://crookedgames.com'>computer games 🕹</a> for a while.  These were Java applets.</p>
+    <p>Here are some gui tools I've made with <a href='http://dl.dropbox.com/u/135901/portfolio/projects.html'>Python and PyQt 🛠</a>.</p>
+    <p>Here are a few desktop games I built way back when:  <a href='http://dl.dropbox.com/u/135901/portfolio/games.zip'>games.zip 🚀</a>.  (Windows only)</p>
+
+    </div>
+    <div style="clear:both"></div>
+  </div>
+
+  <div style="margin-top:50px; clear:both"></div>
+
+  <a href='http://projecteuler.net/' style="margin:10px"><img src='http://projecteuler.net/profile/jessealdridge.png'></a>
+
+
+</div>
+
+
+
+</body>
