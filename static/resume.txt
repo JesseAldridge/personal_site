@@ -1,0 +1,143 @@
+
+JESSE ALDRIDGE
+
+Email:  JesseAldridge@gmail.com
+Web:  http://jessealdridge.com
+Location:  San Francisco, CA
+
+
+OBJECTIVE:
+
+I want to build cool stuff with good people, while learning a lot along the way.
+
+
+EXPERIENCE:
+
+
+** Software Engineer; Airbnb; Mar. 2017 - Present **
+
+I am currently a software engineer at Airbnb.
+
+
+** Software Engineer; Gigwalk; Dec. 2015 - Feb. 2017 **
+
+Developed and maintained the Python backend of a large-scale web application used to manage and
+coordinate distributed workforces.  I worked with Flask, Postgres, MongoDB, ElasticSearch, Celery,
+and numerous related technologies on a daily basis.  I built several new features, fixed many
+bugs, and promoted good software engineering practices.
+
+
+** Software Engineer; Instacart; 2015 **
+
+Worked on the Rails backend of Instacart's shopper app.  The app is used daily by tens of thousands
+of grocery delivery contractors.  My work involved adding new features, fixing bugs, and being
+on-call for critical outages for a rapidly growing product.
+
+
+** Independent Developer; 2013 - 2015 **
+
+Decided to try and start a startup.  Worked on several different ideas.  The one I spent the most
+time on was TaskRanger.com, a unique time tracking tool.  I built it with AngularJS and Firebase.
+
+
+** Software Developer; Zenoss; 2012 - 2013 **
+
+Fixed bugs and provided engineering support to high-value customers for an industry leading
+infrastructure monitoring product.  Worked with Zope, MySQL, RRDtool, Linux (CentOS), Python, Java,
+Neo4J, and a lot more.
+You can find a list of their customers here:  http://www.zenoss.com/customers/index
+
+
+** Python/Django Engineer; Mutual Mobile; 2011 - 2012 **
+
+Worked on cross-functional teams of designers and developers to build award winning mobile
+solutions for Fortune 500 companies.  Worked extensively with Python, Django, PostgreSQL,
+Linux (Ubuntu), AWS, and other related technologies.  You can find a list of their clients here:
+http://www.mutualmobile.com/work
+
+More specifically, during my time here I:
+
+- Wrote the CMS backend for an iPad app we developed for a major telecommunications company.
+The app is currently being used by over 10,000 salespeople.
+
+- Built a scalable, clustered video processing server for use with a large consumer iOS app.
+
+- Built a recording proxy server and data validation toolset which made integrating with unreliable
+third party servers less painful.
+
+
+** Web Developer; Texas Faculty Association; 2010 - 2011 **
+
+Designed, built, and maintained http://tfaonline.net
+
+Also built a content management system which made it easy to post articles to the site and maintain
+the mailing-list.
+
+
+** Independent Developer (Developer Tools); 2009 — 2010 **
+
+I spent a couple of years exploring my interest in programmer productivity.  This
+work mainly focused on client-side gui stuff.  During this time I worked primarily with
+Python and PyQt, before eventually moving on to Javascript and Jquery.
+
+Examples of work from this period:  http://dl.dropbox.com/u/135901/portfolio/projects.html
+
+
+** Independent Developer (Computer Games); 2004 - 2009 **
+
+I spent a few years developing computer games independently along with a few friends.  We worked
+with C++ and Java.  I used SDL, OpenGL, DirectX, and various other game related libraries.  My
+most successful game from this period, Space Grabber, was played by tens of thousands of people.
+
+Examples of work from this period:
+
+  http://crookedgames.com/
+  http://dl.dropbox.com/u/135901/portfolio/games.zip (Windows only)
+
+
+
+TECHNOLOGIES:
+
+14 years of general programming experience.
+
+Technology       Years of experience
+------------------------------------
+Python         |  9
+Unix systems   |  7
+Javascript     |  6
+JQuery         |  4
+HTML/CSS       |  5
+C++            |  4
+Flask          |  4
+Java           |  4
+Firebase       |  3
+Bash scripting |  3
+PySide/PyQt    |  3
+SQL            |  3
+AWS            |  3
+Ruby/Rails     |  2
+AngularJS      |  2
+Django         |  2
+Heroku         |  2
+Celery         |  2
+MongoDB        |  2
+ElasticSearch  |  2
+VueJs          |  1
+Android        |  1
+iOS            |  1
+PHP            |  1
+
+I believe I can pick up any new platform relatively quickly.
+
+
+MISC:
+
+Online profiles:
+  https://stackoverflow.com/users/88696/jesse-aldridge
+  https://github.com/JesseAldridge
+
+
+EDUCATION:
+
+  University of Texas at Austin
+    Computer Science, 2003-2005
