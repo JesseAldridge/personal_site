@@ -13,10 +13,14 @@ I want to build cool stuff with good people, while learning a lot along the way.
 
 EXPERIENCE:
 
+** Jul. 2018 - Present **
 
-** Software Engineer; Airbnb; Feb. 2017 - Jul. 2017 **
+I am currently exploring a few different startup ideas.
 
-Working as a full-stack Rails developer, I helped build the Airbnb Plus program (airbnb.com/plus).
+
+** Software Engineer; Airbnb; Feb. 2017 - Jul. 2018 **
+
+As a full-stack Rails developer, I helped build the Airbnb Plus program (airbnb.com/plus). I worked on the supply-side (getting hosts into Plus). My work included building out our host communications infrastructure and developing a tool for doing standards enforcement.
 
 
 ** Software Engineer; Gigwalk; Dec. 2015 - Feb. 2017 **
@@ -110,22 +114,24 @@ HTML/CSS       |  5
 C++            |  4
 Flask          |  4
 Java           |  4
+SQL            |  4
 Firebase       |  3
 Bash scripting |  3
 PySide/PyQt    |  3
-SQL            |  3
 AWS            |  3
-Ruby/Rails     |  2
+Ruby/Rails     |  3
 AngularJS      |  2
 Django         |  2
 Heroku         |  2
 Celery         |  2
 MongoDB        |  2
 ElasticSearch  |  2
+React          |  1
 VueJs          |  1
 Android        |  1
 iOS            |  1
 PHP            |  1
+Hive           |  1
 
 I believe I can pick up any new platform relatively quickly.
 
