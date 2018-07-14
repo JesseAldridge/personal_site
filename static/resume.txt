@@ -20,7 +20,9 @@ I am currently exploring a few different startup ideas.
 
 ** Software Engineer; Airbnb; Feb. 2017 - Jul. 2018 **
 
-As a full-stack Rails developer, I helped build the Airbnb Plus program (airbnb.com/plus). I worked on the supply-side (getting hosts into Plus). My work included building out our host communications infrastructure and developing a tool for doing standards enforcement.
+As a full-stack Rails developer, I helped build the Airbnb Plus program (airbnb.com/plus). I worked
+on the supply-side (getting hosts into Plus). My work included building out our host communications
+infrastructure and developing a tool for doing standards enforcement.
 
 
 ** Software Engineer; Gigwalk; Dec. 2015 - Feb. 2017 **
