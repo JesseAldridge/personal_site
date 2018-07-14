@@ -1,0 +1,118 @@
+
+<html style='background-color:#aa9'>
+
+<center>
+<canvas id='canvas' width='320' height='240'
+         style='border:solid 4px; border-color:#333'></canvas>
+<p><a href='http://www.bitstorm.org/gameoflife/'>The Game of Life</a></p>
+<p><a href='http://jessealdridge.com'>http://jessealdridge.com</a></p>
+</center>
+<script>
+var num_rows = 120, num_cols = 160, rect_size = 2
+
+function draw_board() {
+    // White background on left, black on right.
+    var canvas = document.getElementById('canvas')
+    var context = canvas.getContext('2d')
+
+    context.fillStyle = 'black'
+    context.fillRect(0,0, rect_size * num_cols, rect_size * num_rows)
+    context.fillStyle = 'white'
+    context.fillRect(rect_size * num_cols / 2, 0,
+                     rect_size * num_cols / 2, rect_size * num_rows)
+
+    // Render with gradient on right, render plain on left.
+    for(var r = 0; r < num_rows; r++)
+        for(var c = 0; c < num_cols; c++) {
+            if(r >= num_rows / 2) {
+                if(board[r][c] > 0) {
+                    var hex_str = Math.floor(board[r][c] * 255).toString(16)
+                    if(hex_str.length == 1)  hex_str = '0' + hex_str
+                    context.fillStyle = '#' + hex_str + '0000'
+                    context.fillRect(rect_size * c, rect_size * r,
+                                     rect_size, rect_size)
+                }
+            }
+            else if(board[r][c] == 1) {
+                context.fillStyle = '#ff0000'
+                context.fillRect(rect_size * c, rect_size * r,
+                                 rect_size, rect_size)
+            }
+        }
+}
+
+function make_board(){
+    // Make an empty grid of size num_rows x num_cols.
+    board = []
+    for(var r = 0; r < num_rows; r++) {
+        board.push([])
+        for(var c = 0; c < num_cols; c++)
+            board[r].push(0)
+    }
+    return board
+}
+
+// Make initial board.  Randomly populate some initial squares.
+curr_board = make_board()
+for(var i = 0; i < num_rows * num_cols * .1; i++) {
+    var r = Math.floor(Math.random() * num_rows)
+    var c = Math.floor(Math.random() * num_cols)
+    curr_board[r][c] = 1
+}
+
+function iterate() {
+    /*
+    For a space that is 'populated':
+        Each cell with one or no neighbors dies, as if by loneliness.
+        Each cell with four or more neighbors dies, as if by overpopulation.
+        Each cell with two or three neighbors survives.
+
+    For a space that is 'empty' or 'unpopulated'
+        Each cell with three neighbors becomes populated.
+    */
+
+    new_board = make_board()
+
+    for(var r = 0; r < num_rows; r++)
+        for(var c = 0; c < num_cols; c++) {
+
+            // Count neighbors
+            var num_neighbors = 0
+            for(var roff = -1; roff <= 1; roff++) {
+                for(var coff = -1; coff <= 1; coff++) {
+                    if(r + roff < 0 || r + roff >= num_rows ||
+                       c + coff < 0 || c + coff >= num_cols ||
+                       (roff == 0 && coff == 0))
+                       continue
+                    if(curr_board[r + roff][c + coff] == 1)
+                        num_neighbors += 1
+                }
+            }
+
+            // Apply transformation rules.  Fade away after dying.
+            if(curr_board[r][c] == 1) {
+                if(num_neighbors <= 1 || num_neighbors >= 4)
+                    new_board[r][c] = .9
+                else
+                    new_board[r][c] = 1
+            }
+            else if(num_neighbors == 3)
+                new_board[r][c] = 1
+            else {
+                new_board[r][c] = curr_board[r][c] * .95
+                if(new_board[r][c] < .01)  new_board[r][c] = 0
+            }
+        }
+    curr_board = new_board
+    draw_board()
+    setTimeout(iterate, 20)
+}
+
+draw_board()
+var canvas = document.getElementById('canvas')
+var context = canvas.getContext('2d')
+context.fillStyle = 'white'
+context.fillRect(0,0, rect_size * num_cols, rect_size * num_rows)
+iterate()
+</script>
+</html>

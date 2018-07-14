@@ -1,0 +1,144 @@
+<html>
+<head>
+<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+</head>
+<body>
+
+<script type="application/processing">
+
+
+function segment_intersect(x1,y1,x2,y2,x3,y3,x4,y4) {
+    // Get the point at which two line segments intersect.
+
+    var bottom = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
+
+    // (parallel)
+    if(bottom == 0)
+        return false;
+
+    var ua_top = (x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3);
+    var ub_top = (x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3);
+
+    var ua = ua_top / bottom;
+    var ub = ub_top / bottom;
+
+    if(ua <= 0 || ua >= 1 || ub <= 0 || ub >= 1)
+        return false;
+
+    var x = x1 + ua * (x2 - x1);
+    var y = y1 + ua * (y2 - y1);
+    return [x, y];
+}
+
+void setup(){
+  // Setup the Processing canvas.
+
+  size(500, 500);
+  strokeWeight(4);
+  frameRate(30);
+
+  mirror_lines = [[100, 100, 100, 400],
+                  [100, 100, 400, 100],
+                  [400, 100, 400, 400],
+                  [100, 400, 400, 400]];
+}
+
+
+void text_angle(str, angle, x, y) {
+  // Debugging output for angles.
+
+  while(angle < 0)
+    angle += 2 * PI;
+  while(angle > 2 * PI)
+    angle -= 2 * PI;
+  text(str + ': ' + Number(angle * 180 / PI).toFixed(2) +
+       ' (%f rads)'.replace('%f', angle.toFixed(2)), x, y);
+}
+
+
+void ray_trace(x0, y0, x1, y1, recurse_count) {
+
+  // Check if mirror lines intersect with ray.
+
+  var dist = sqrt(pow((y1 - y0), 2) + pow((x1 - x0), 2));
+
+  if(dist < 1)
+    return;
+
+  var was_intersection = false;
+  for(var line_index = 0; line_index < mirror_lines.length; line_index++) {
+    line_ = mirror_lines[line_index];
+    intersect_p = segment_intersect(line_[0], line_[1], line_[2], line_[3],
+                                    x0, y0, x1, y1);
+
+    if(intersect_p != false) {
+
+      // If intersection, draw partial ray.  Calculate normal.
+
+      was_intersection = true;
+      var ix = intersect_p[0], iy = intersect_p[1];
+      shade = recurse_count * 30 % 128
+      stroke(128 - shade, 230 - shade, 255 - shade);
+      line(x0, y0, ix, iy);
+
+      if(line_[0] == line_[2])
+          normal_angle = 0;
+      else if(line_[1] == line_[3])
+          normal_angle = PI / 2;
+
+      // Calculate angles.  Calculate next position.  Draw remaining ray.
+
+      var old_angle = atan2(y1 - y0, x1 - x0);
+      var reflected_angle = -old_angle + 2 * normal_angle + PI;
+      var dist_traveled = sqrt(pow(ix - x0, 2) + pow(iy - y0, 2));
+      var remaining_dist = dist - dist_traveled;
+      var new_x = ix + cos(reflected_angle) * remaining_dist;
+      var new_y = iy + sin(reflected_angle) * remaining_dist;
+      ray_trace(ix, iy, new_x, new_y, recurse_count + 1);
+    }
+  }
+  if(!was_intersection)
+      line(x0, y0, x1, y1);
+}
+
+
+void draw(){
+  // Main callback.  Draw background stuff.  Rotate ray origin.
+
+  text_angle_line = 7;
+  background( 240 );
+  fill( 40 );
+  stroke(200);
+  var origin_x = width / 2 + cos(frameCount * .01) * 100;
+  var origin_y = height / 2 + sin(frameCount * .01) * 100;
+  ellipse( origin_x, origin_y, 5, 5 );
+
+  // Draw mirror lines.
+
+  for(var line_index = 0; line_index < mirror_lines.length; line_index++) {
+    var line_ = mirror_lines[line_index];
+    line(line_[0], line_[1], line_[2], line_[3]);
+  }
+  // fill(0);
+  // text('mouse: (%x,%y)'.replace('%x', mouseX).replace('%y', mouseY), 10, 20);
+
+  // Calculate potential endpoint of ray.
+
+  var dx = mouseX - origin_x;
+  var dy = mouseY - origin_y;
+  var angle = atan2(dy, dx);
+  // var dist = sin(frameCount * .01) * frameCount * 2;
+  var dist = sin(frameCount * .005) * frameCount * 4;
+  // var dist = frameCount * 5;
+  var x2 = origin_x + cos(angle) * dist;
+  var y2 = origin_y + sin(angle) * dist;
+  ray_trace(origin_x, origin_y, x2, y2, 0);
+}
+
+</script><canvas></canvas>
+
+<p>2d ray-bounce thing.</p>
+<p><a href='http://jessealdridge.com'>http://jessealdridge.com</a></p>
+
+</body>
+</html>

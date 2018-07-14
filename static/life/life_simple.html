@@ -1,0 +1,91 @@
+
+<html>
+
+<canvas id='canvas' width='640' height='480'></canvas>
+
+<script>
+var num_rows = 240, num_cols = 320, rect_size = 2
+
+function draw_board() {
+    // Draw black rect for unpopulated, red for populated.
+    var canvas = document.getElementById('canvas')
+    var context = canvas.getContext('2d')
+
+    context.fillStyle = 'black'
+    context.fillRect(0,0, rect_size * num_cols, rect_size * num_rows)
+
+    context.fillStyle = 'red'
+    for(var r = 0; r < num_rows; r++)
+        for(var c = 0; c < num_cols; c++) {
+            if(board[r][c] == '*')
+                context.fillRect(rect_size * c, rect_size * r,
+                                 rect_size, rect_size)
+        }
+}
+
+function make_board(){
+    // Make an empty grid of size num_rows x num_cols.
+    board = []
+    for(var r = 0; r < num_rows; r++) {
+        board.push([])
+        for(var c = 0; c < num_cols; c++)
+            board[r].push(' ')
+    }
+    return board
+}
+
+// Make initial board.  Randomly populate some initial squares.
+curr_board = make_board()
+for(var i = 0; i < num_rows * num_cols * .1; i++) {
+    var r = Math.floor(Math.random() * num_rows)
+    var c = Math.floor(Math.random() * num_cols)
+    curr_board[r][c] = '*'
+}
+
+function iterate() {
+    /*
+    For a space that is 'populated':
+        Each cell with one or no neighbors dies, as if by loneliness.
+        Each cell with four or more neighbors dies, as if by overpopulation.
+        Each cell with two or three neighbors survives.
+
+    For a space that is 'empty' or 'unpopulated'
+        Each cell with three neighbors becomes populated.
+    */
+
+    new_board = make_board()
+
+    for(var r = 0; r < num_rows; r++)
+        for(var c = 0; c < num_cols; c++) {
+
+            // Count neighbors
+            var num_neighbors = 0
+            for(var roff = -1; roff <= 1; roff++) {
+                for(var coff = -1; coff <= 1; coff++) {
+                    if(r + roff < 0 || r + roff >= num_rows ||
+                       c + coff < 0 || c + coff >= num_cols ||
+                       (roff == 0 && coff == 0))
+                       continue
+                    if(curr_board[r + roff][c + coff] != ' ')
+                        num_neighbors += 1
+                }
+            }
+
+            if(curr_board[r][c] == '*') {
+                if(num_neighbors <= 1 || num_neighbors >= 4)
+                    new_board[r][c] = ' '
+                else
+                    new_board[r][c] = '*'
+            }
+            else if(num_neighbors == 3)
+                new_board[r][c] = '*'
+        }
+    curr_board = new_board
+    draw_board()
+    setTimeout(iterate, 20)
+}
+
+draw_board()
+iterate()
+</script>
+</html>
