@@ -86,8 +86,6 @@ I spent a couple of years exploring my interest in programmer productivity.  Thi
 work mainly focused on client-side gui stuff.  During this time I worked primarily with
 Python and PyQt, before eventually moving on to Javascript and Jquery.
 
-Examples of work from this period:  http://dl.dropbox.com/u/135901/portfolio/projects.html
-
 
 ** Independent Developer (Computer Games); 2004 - 2009 **
 
@@ -98,7 +96,8 @@ most successful game from this period, Space Grabber, was played by tens of thou
 Examples of work from this period:
 
   http://crookedgames.com/
-  http://dl.dropbox.com/u/135901/portfolio/games.zip (Windows only)
+  https://s3.amazonaws.com/jca-portfolio/games.zip (Windows only)
+
 
 
 
