@@ -51,8 +51,6 @@ time on was TaskRanger.com, a unique time tracking tool.  I built it with Angula
 Fixed bugs and provided engineering support to high-value customers for an industry leading
 infrastructure monitoring product.  Worked with Zope, MySQL, RRDtool, Linux (CentOS), Python, Java,
 Neo4J, and a lot more.
-You can find a list of their customers here:  http://www.zenoss.com/customers/index
-
 
 ** Python/Django Engineer; Mutual Mobile; 2011 - 2012 **
 
@@ -69,7 +67,7 @@ The app is currently being used by over 10,000 salespeople.
 - Built a scalable, clustered video processing server for use with a large consumer iOS app.
 
 - Built a recording proxy server and data validation toolset which made integrating with unreliable
-third party servers less painful.
+third party web services less painful.
 
 
 ** Web Developer; Texas Faculty Association; 2010 - 2011 **
