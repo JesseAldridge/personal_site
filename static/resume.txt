@@ -101,8 +101,6 @@ Examples of work from this period:
 
 TECHNOLOGIES:
 
-14 years of general programming experience.
-
 Technology       Years of experience
 ------------------------------------
 Python         |  9
@@ -132,6 +130,7 @@ iOS            |  1
 PHP            |  1
 Hive           |  1
 
+I have 15 years of general programming experience.
 I believe I can pick up any new platform relatively quickly.
 
 
