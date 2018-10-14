@@ -97,8 +97,6 @@ Examples of work from this period:
   https://s3.amazonaws.com/jca-portfolio/games.zip (Windows only)
 
 
-
-
 TECHNOLOGIES:
 
 Technology       Years of experience
