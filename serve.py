@@ -3,7 +3,7 @@ import sys, json
 import flask, flask_letsencrypt
 from flask import request
 
-app = flask.Flask(__name__, static_url_path='/')
+app = flask.Flask(__name__)
 port = int(sys.argv[1]) if len(sys.argv) == 2 else 80
 
 
