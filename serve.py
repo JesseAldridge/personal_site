@@ -20,7 +20,7 @@ def contact():
     f.write(json.dumps(request.form) + '\n')
   return flask.render_template("thank-you.html")
 
-@app.route('.well-known/acme-challenge/SA6HnavVx_VbGUV0LO8lmzavdHpP5Th9plU8DJuE7Dk')
+@app.route('/.well-known/acme-challenge/SA6HnavVx_VbGUV0LO8lmzavdHpP5Th9plU8DJuE7Dk')
 def well_known():
   return app.send_static_file('static/.well-known/acme-challenge/SA6HnavVx_VbGUV0LO8lmzavdHpP5Th9plU8DJuE7Dk')
 
