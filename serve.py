@@ -10,6 +10,9 @@ port = int(sys.argv[1]) if len(sys.argv) == 2 else 80
 def index():
   return flask.render_template("index.html")
 
+@app.route('/resume')
+def resume():
+  return flask.render_template("resume.html")
 
 @app.route('/contact', methods=['POST'])
 def contact():
