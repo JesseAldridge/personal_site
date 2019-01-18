@@ -127,6 +127,7 @@ Android        |  1
 iOS            |  1
 PHP            |  1
 Hive           |  1
+WordPress      |  1
 
 I have 15 years of general programming experience.
 I believe I can pick up any new platform relatively quickly.
