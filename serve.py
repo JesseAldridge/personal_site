@@ -1,4 +1,5 @@
 import sys, json
+from datetime import datetime
 
 import flask, flask_letsencrypt
 from flask import request
@@ -27,7 +28,9 @@ def resume():
 @app.route('/contact', methods=['POST'])
 def contact():
   with open('messages.txt', 'a') as f:
-    f.write(json.dumps(request.form) + '\n')
+    args_dict = dict(request.form)
+    args_dict['timestamp'] = datetime.now().isoformat()
+    f.write(json.dumps(args_dict) + '\n')
   return flask.render_template("thank-you.html")
 
 if __name__ == '__main__':
