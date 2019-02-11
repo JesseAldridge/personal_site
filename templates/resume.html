@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <style>
   body {
-    /*background:linear-gradient(to bottom, #4488dd 0%, #44dddd 100%);*/
     background: #dddddd;
-    margin: 0; height:100%
-    padding: 0 10px;
+    margin: 0;
+    padding: 10px;
   }
 
   .main_div {
@@ -13,6 +12,7 @@
     padding-left:30px; padding-right:30px; padding-top:15px;
     padding-bottom:15px; border-radius:10px;
     font-size:90%; font-family:Verdana;
+    height: 100%;
   }
   .years_col {
     float:left; border-right:solid 1px; width:20%; text-align:right;
@@ -42,14 +42,8 @@
     width:16px; height:16px
   }
 
-  img.gmail {
-    margin-bottom: -10px; margin-right: 9px;
-  }
-
-  .gradient-box {
-    border-radius: 50px;
-    right: 0px; top: 20px;
-    width:100px; height:100px; position: absolute;
+  .euler {
+    margin: 10px 0px
   }
 
 </style>
@@ -57,8 +51,6 @@
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'>
 </script>
 <body>
-
-<div class='gradient-box' title="no, it doesn't do anything (besides look pretty)"></div>
 
 <div class='main_div'>
 
@@ -109,6 +101,6 @@
 
   <div style="margin-top:50px; clear:both"></div>
 
-  <a href='http://projecteuler.net/' style="margin:10px"><img src='http://projecteuler.net/profile/jessealdridge.png'></a>
+  <a href='http://projecteuler.net/'><img class='euler' src='http://projecteuler.net/profile/jessealdridge.png'></a>
 </div>
 </body>
