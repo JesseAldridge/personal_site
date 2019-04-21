@@ -21,6 +21,10 @@ le.challenge_loader(handle_letsencrypt_challenge)
 def index():
   return flask.render_template("index.html")
 
+@app.route('/resume')
+def resume():
+  return flask.render_template("index.html")
+
 if __name__ == '__main__':
   app.config['TEMPLATES_AUTO_RELOAD'] = True
   app.run(host='0.0.0.0', port=port, debug=(port != 80))
