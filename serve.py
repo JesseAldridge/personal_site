@@ -21,18 +21,6 @@ le.challenge_loader(handle_letsencrypt_challenge)
 def index():
   return flask.render_template("index.html")
 
-@app.route('/resume')
-def resume():
-  return flask.render_template("resume.html")
-
-@app.route('/contact', methods=['POST'])
-def contact():
-  with open('messages.txt', 'a') as f:
-    args_dict = dict(request.form)
-    args_dict['timestamp'] = datetime.now().isoformat()
-    f.write(json.dumps(args_dict) + '\n')
-  return flask.render_template("thank-you.html")
-
 if __name__ == '__main__':
   app.config['TEMPLATES_AUTO_RELOAD'] = True
   app.run(host='0.0.0.0', port=port, debug=(port != 80))
