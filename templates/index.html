@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <style>
-  body {
-    background: #dddddd;
-    margin: 0;
-    padding: 10px;
-  }
+  @media screen and (max-device-width: 770px) {
+    .main_div {
+      font-family:Verdana;
+    }
 
-  .main_div {
-    margin-left:auto; margin-right:auto;
-    background:#fff;
-    padding-left:30px; padding-right:30px; padding-top:15px;
-    padding-bottom:15px; border-radius:10px;
-    font-size:90%; font-family:Verdana;
-    height: 100%;
-  }
-  .years_col {
-    float:left; border-right:solid 1px; width:20%; text-align:right;
-    padding-right:10px; border-color:#ccc
-  }
-  .main_text { margin-top: 40px; }
+    .stats {
+      margin: 80px 0;
+    }
 
-  @media screen and (max-device-width: 480px){
+    .resume {
+      margin: 80px 0;
+    }
+
     .years_col {display:none}
     .main_text {margin-left:auto; margin-right:auto; width:100%}
+
+    .social_links {
+      padding-bottom: 20px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .social_links > a > img {
+      width: 64px;
+      height: 64px;
+      margin: 7px;
+    }
+
+    .main_text p {
+      margin: 40px 0;
+    }
+
+    .euler {
+      margin-top: 80px;
+      width: 40%;
+    }
   }
 
-  .stats {
-    display: inline-block;
-    float: right;
-    text-align: right;
-  }
 
-  .social_links {
-    width: 80px;
-    padding-bottom: 20px;
-    display: inline-block;
-    vertical-align: top;
-  }
+  @media screen and (min-device-width: 771px) {
+    body {
+      background: #dddddd;
+      margin: 0;
+      padding: 10px;
+    }
 
-  .social_links > a > img {
-    width:16px; height:16px
-  }
+    .main_div {
+      margin-left:auto; margin-right:auto;
+      background:#fff;
+      padding-left:30px; padding-right:30px; padding-top:15px;
+      padding-bottom:15px; border-radius:10px;
+      font-size:90%; font-family:Verdana;
+      height: 100%;
+    }
+    .years_col {
+      float:left; border-right:solid 1px; width:20%; text-align:right;
+      padding-right:10px; border-color:#ccc
+    }
+    .main_text { margin-top: 40px; }
 
-  .euler {
-    margin: 10px 0px
+    .stats {
+      display: inline-block;
+      float: right;
+      text-align: right;
+    }
+
+    .social_links {
+      width: 80px;
+      padding-bottom: 20px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .social_links > a > img {
+      width:16px; height:16px
+    }
+
+    .euler {
+      margin: 10px 0px
+    }
   }
 
 </style>
@@ -74,7 +110,7 @@
       <div><a href='mailto:JesseAldridge@gmail.com'>JesseAldridge@gmail.com</a></div>
       <div>Web Developer</div>
       <div>San Francisco</div>
-      <p><a href='static/resume.txt'>Formal Resume (.txt)</a></p>
+      <p class='resume'><a href='static/resume.txt'>Formal Resume (.txt)</a></p>
     </div>
 
   </div>
