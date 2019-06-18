@@ -18,6 +18,7 @@ EXPERIENCE:
 I'm currently doing freelance web development with a focus on eCommerce.
 See my Upwork profile for more info: https://www.upwork.com/fl/jessealdridge
 
+
 ** Software Engineer; Airbnb; Feb. 2017 - Jul. 2018 **
 
 As a full-stack Rails developer, I helped build the Airbnb Plus program (airbnb.com/plus). I worked
