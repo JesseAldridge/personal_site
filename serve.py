@@ -1,21 +1,11 @@
 import sys, json
 from datetime import datetime
 
-import flask, flask_letsencrypt
+import flask
 from flask import request
 
 app = flask.Flask(__name__)
 port = int(sys.argv[1]) if len(sys.argv) == 2 else 80
-
-
-with open('le_challenge.txt') as f:
-  challenge_text = f.read()
-
-def handle_letsencrypt_challenge(challenge):
-  return challenge_text
-
-le = flask_letsencrypt.LetsEncrypt(app)
-le.challenge_loader(handle_letsencrypt_challenge)
 
 @app.route('/')
 def index():
