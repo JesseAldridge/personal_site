@@ -15,7 +15,7 @@ EXPERIENCE:
 
 ** Jul. 2018 - Present **
 
-I'm currently doing freelance web development with a focus on eCommerce.
+I'm currently doing freelance web development with a focus on WordPress and eCommerce.
 See my Upwork profile for more info: https://www.upwork.com/fl/jessealdridge
 
 
@@ -107,10 +107,10 @@ Unix systems   |  7
 Javascript     |  6
 JQuery         |  4
 HTML/CSS       |  5
+SQL            |  5
 C++            |  4
 Flask          |  4
 Java           |  4
-SQL            |  4
 Firebase       |  3
 Bash scripting |  3
 PySide/PyQt    |  3
@@ -122,13 +122,15 @@ Heroku         |  2
 Celery         |  2
 MongoDB        |  2
 ElasticSearch  |  2
+WordPress      |  2
+PHP            |  2
 React          |  1
 VueJs          |  1
 Android        |  1
 iOS            |  1
-PHP            |  1
 Hive           |  1
-WordPress      |  1
+WooCommerce    |  1
+Elementor      |  1
 
 I have 15 years of general programming experience.
 I believe I can pick up any new platform relatively quickly.
