@@ -1,0 +1,31 @@
+<style>
+#graphic {
+  width: var(--window-width);
+  height: var(--window-height);
+}
+
+#graphic {
+  position: absolute;
+
+  left: var(--graphic-pos);
+
+  content: '';
+  z-index: -1;
+  width: 7496px;
+  height: var(--window-height);
+  background-image: url(http://52.23.206.179/wp-content/uploads/2019/07/Wang_Ximeng_-_A_Thousand_Li_of_River_Bridge-1568x335.jpg);
+}
+</style>
+
+<div id="graphic"></div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script>
+  let curr_pos = 0;
+  setInterval(function(argument) {
+    curr_pos -= 1;
+    document.getElementById("graphic").style.setProperty('--graphic-pos', curr_pos);
+    document.getElementById("graphic").style.setProperty(
+      '--window-height', document.body.clientHeight);
+  }, 1000/30);
+</script>
