@@ -15,8 +15,7 @@ EXPERIENCE:
 
 ** Jul. 2018 - Present **
 
-I'm currently doing freelance web development with a focus on WordPress and eCommerce.
-See my Upwork profile for more info: https://www.upwork.com/fl/jessealdridge
+I'm currently doing freelance web development with a focus on WordPress and eCommerce. I've successfully completed 17 projects as of October 2019.
 
 
 ** Software Engineer; Airbnb; Feb. 2017 - Jul. 2018 **
@@ -53,6 +52,7 @@ Fixed bugs and provided engineering support to high-value customers for an indus
 infrastructure monitoring product.  Worked with Zope, MySQL, RRDtool, Linux (CentOS), Python, Java,
 Neo4J, and a lot more.
 
+
 ** Python/Django Engineer; Mutual Mobile; 2011 - 2012 **
 
 Worked on cross-functional teams of designers and developers to build award winning mobile
@@ -75,27 +75,17 @@ third party web services less painful.
 
 Designed, built, and maintained http://tfaonline.net
 
-Also built a content management system which made it easy to post articles to the site and maintain
-the mailing-list.
+Also built a content management system which made it easy to post articles to the site and maintain the mailing-list.
 
 
 ** Independent Developer (Developer Tools); 2009 — 2010 **
 
-I spent a couple of years exploring my interest in programmer productivity.  This
-work mainly focused on client-side gui stuff.  During this time I worked primarily with
-Python and PyQt, before eventually moving on to Javascript and Jquery.
+I spent a year exploring my interest in programmer productivity. I built a variety of tools for increasing developer efficiency. During this time I worked primarily with Python and PyQt, before eventually moving on to Javascript and Jquery.
 
 
 ** Independent Developer (Computer Games); 2004 - 2009 **
 
-I spent a few years developing computer games independently along with a few friends.  We worked
-with C++ and Java.  I used SDL, OpenGL, DirectX, and various other game related libraries.  My
-most successful game from this period, Space Grabber, was played by tens of thousands of people.
-
-Examples of work from this period:
-
-  http://crookedgames.com/
-  https://s3.amazonaws.com/jca-portfolio/games.zip (Windows only)
+I spent a few years developing computer games independently along with a few friends. We worked with C++ and Java. I used SDL, OpenGL, DirectX, and various other game related libraries. My most successful game from this period, Space Grabber, was played by tens of thousands of people.
 
 
 TECHNOLOGIES:
