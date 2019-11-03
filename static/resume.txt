@@ -44,7 +44,8 @@ on-call for critical outages for a rapidly growing product.
 ** Independent Developer; 2013 - 2015 **
 
 Decided to try and start a startup.  Worked on several different ideas.  The one I spent the most
-time on was TaskRanger.com, a unique time tracking tool.  I built it with AngularJS and Firebase.
+time on was TaskRanger.com, a unique time tracking tool (now defunct).  I built it with AngularJS
+and Firebase.
 
 
 ** Software Developer; Zenoss; 2012 - 2013 **
