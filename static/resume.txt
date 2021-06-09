@@ -3,20 +3,24 @@ JESSE ALDRIDGE
 
 Email:  JesseAldridge@gmail.com
 Web:  http://jessealdridge.com
-Location:  San Francisco, CA
+Location:  Airbnb nomad
 
 
 OBJECTIVE:
 
-I want to build cool stuff with good people, while learning a lot along the way.
+I want to build cool stuff with good people, while learning a lot along the way. Oh, and money -- I'd like a big pile of that.
 
 
 EXPERIENCE:
 
-** Jul. 2018 - Present **
+** Software Engineer / Investor; self-employed; Oct. 2019 - present **
 
-I'm currently doing freelance web development with a focus on WordPress and eCommerce. I've
-successfully completed 17 projects as of October 2019.
+I've developed software to help me manage my personal capital. This software allows me to test out and validate hundreds of different investing strategies, find a handful of uncorrelated strategies that generate the best risk-adjusted returns, and allocate my funds accordingly. I've roughly doubled my money since I started doing this, but that might be mostly luck.
+
+
+** Software Engineer; freelance; Jul. 2018 - Oct. 2019 **
+
+I left Airbnb because I wanted to build an AI that could write code. I decided the best way to approach this would be to become a freelancer and try to automate myself away over time. I saw WordPress and eCommerce were in high demand so I decided to focus on that. I successfully completed 17 projects; check out https://www.bigscreensoftware.com/ to see my reviews. Ultimately I found writing code is the easy part -- the hard part is finding strong enough customer demand to justify significant investment in software.
 
 
 ** Software Engineer; Airbnb; Feb. 2017 - Jul. 2018 **
@@ -99,11 +103,11 @@ TECHNOLOGIES:
 
 Technology       Years of experience
 ------------------------------------
-Python         |  9
-Unix systems   |  7
-Javascript     |  6
+Python         |  11
+Unix systems   |  9
+Javascript     |  8
 JQuery         |  4
-HTML/CSS       |  5
+HTML/CSS       |  7
 SQL            |  5
 C++            |  4
 Flask          |  4
@@ -128,8 +132,9 @@ iOS            |  1
 Hive           |  1
 WooCommerce    |  1
 Elementor      |  1
+...and a bunch of other stuff too
 
-I have 15 years of general programming experience.
+I have 18 years of general programming experience.
 I believe I can pick up any new platform relatively quickly.
 
 
