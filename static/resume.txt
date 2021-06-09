@@ -112,10 +112,10 @@ SQL            |  5
 C++            |  4
 Flask          |  4
 Java           |  4
+AWS            |  4
+Bash scripting |  4
 Firebase       |  3
-Bash scripting |  3
 PySide/PyQt    |  3
-AWS            |  3
 Ruby/Rails     |  3
 AngularJS      |  2
 Django         |  2
